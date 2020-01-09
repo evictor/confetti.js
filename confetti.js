@@ -146,7 +146,7 @@ var confetti = {
 	}
 
 	function removeConfetti() {
-		stop();
+		stopConfetti();
 		pause = false;
 		particles = [];
 	}
