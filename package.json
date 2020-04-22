@@ -1,0 +1,8 @@
+{
+  "name": "confetti.js",
+  "version": "1.0.0",
+  "main": "confetti.js",
+  "repository": "git@github.com:mathusummut/confetti.js.git",
+  "author": "mathusummut <mathusum.mut@gmail.com>",
+  "license": "MIT"
+}
