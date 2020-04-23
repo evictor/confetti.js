@@ -70,7 +70,8 @@ var confetti = {
 	function runAnimation() {
 		if (pause)
 			return;
-		else if (particles.length === 0) {
+
+		if (particles.length === 0) {
 			context.clearRect(0, 0, window.innerWidth, window.innerHeight);
 			animationTimer = null;
 		} else {
@@ -117,7 +118,7 @@ var confetti = {
 		var count = confetti.maxCount;
 		if (min) {
 			if (max) {
-				if (min == max)
+				if (min === max)
 					count = particles.length + max;
 				else {
 					if (min > max) {
@@ -164,7 +165,7 @@ var confetti = {
 
 	function drawParticles(context) {
 		var particle;
-		var x, y, x2, y2;
+		var x, x2, y2;
 		for (var i = 0; i < particles.length; i++) {
 			particle = particles[i];
 			context.beginPath();
@@ -211,3 +212,6 @@ var confetti = {
 		}
 	}
 })();
+
+if(typeof module != 'undefined')
+	module.exports = confetti
